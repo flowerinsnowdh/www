@@ -1,0 +1,39 @@
+<!--
+Copyright (c) 2024 flowerinsnow
+
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at http://mozilla.org/MPL/2.0/.
+-->
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>编程学习与笔记日记</title>
+    <link rel="stylesheet" type="text/css" href="https://{{ .StaticDomain }}/css/icp.css">
+    <link rel="stylesheet" type="text/css" href="https://{{ .StaticDomain }}/css/style.css">
+</head>
+<body class="body">
+<div class="top-tabs">
+    <a href="https://{{ .WWWDomain }}/" class="top-tab">主页</a>
+    <a href="javascript:alert('这里正在维护')" class="top-tab">分享</a>
+    <a href="https://{{ .WWWDomain }}/contact.html" class="top-tab">联系</a>
+</div>
+
+<div class="card center">
+    <h1 class="h1-in-card">你好！我是冬花ice！</h1>
+    <p class="p-in-card">15岁，计算机专业；主攻语言是Java、Go、信息安全、密码学</p>
+    <p class="p-in-card">欢迎来到我的主页，希望我们共同进步</p>
+    <p class="p-in-card">我的内容都会发布在<a href="{{ .BlogURL }}">这里</a>，欢迎阅读</p>
+</div>
+<div class="beian-container">
+    <div class="beian-inner-container">
+        <a class="beian-icp-link" target="_blank" href="https://beian.miit.gov.cn">苏ICP备2023048510号-1</a>
+        <a class="beian-nismsp-link" target="_blank" href="https://beian.mps.gov.cn/#/query/webSearch">
+            <img class="beian-nismsp-ico" src="https://{{ .StaticDomain }}/ico/nismsp.png" alt="nismsp.png"/>
+            苏公网安备32050502011681号
+        </a>
+    </div>
+</div>
+</body>
+</html>

@@ -32,5 +32,7 @@ jobs:
           name: artifact
           path: |
             www
+            resources/
+            config.toml
             LICENSE
             NOTICE

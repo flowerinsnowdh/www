@@ -6,8 +6,7 @@ www_domain = 'www.flowerinsnow.online'
 blog_url = 'https://blog.flowerinsnow.online/'
 
 [mysql]
-host = 'localhost'
-port = 3306
+host = 'localhost:3306'
 user = 'www'
 password = 'my-password'
 schema = 'www'

@@ -6,7 +6,7 @@ func (d *DAO) InsertAccessLog(remoteAddr *sql.NullString, path string, referer *
     var db *sql.DB = (*sql.DB)(d)
 
     _, err := db.Exec(
-        "INSERT INTO `access_log` (`remote_address`, `path`, `referer`, `user_agent`, `time`) VALUES (?, ?, ?, ?, now()",
+        "INSERT INTO `access_log` (`remote_address`, `path`, `referer`, `user_agent`, `time`) VALUES (?, ?, ?, ?, now())",
         remoteAddr, path, referer, userAgent,
     )
 

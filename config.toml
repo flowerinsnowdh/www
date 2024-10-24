@@ -1,5 +1,4 @@
-bind = '[::1]'
-bind_port = 8080
+bind = '[::1]:8080'
 
 static_domain = 'static.flowerinsnow.online'
 www_domain = 'www.flowerinsnow.online'

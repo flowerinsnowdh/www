@@ -34,5 +34,6 @@ jobs:
             www
             resources/
             config.toml
+            init.sql
             LICENSE
             NOTICE

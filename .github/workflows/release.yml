@@ -203,9 +203,9 @@ jobs:
           
           mkdir release-assets/
           if [ "$GOOS" = "windows" ]; then
-              zip release-assets/www-windows-$ARCH_NAME.zip www.exe resources/ config.toml LICENSE NOTICE    
+              zip release-assets/www-windows-$ARCH_NAME.zip www.exe resources/ config.toml init.sql LICENSE NOTICE    
           else
-              tar -zcf release-assets/www-$GOOS-$ARCH_NAME.tar.gz www resources/ config.toml LICENSE NOTICE
+              tar -zcf release-assets/www-$GOOS-$ARCH_NAME.tar.gz www resources/ config.toml init.sql LICENSE NOTICE
           fi
       - name: Upload release
         uses: softprops/action-gh-release@v2

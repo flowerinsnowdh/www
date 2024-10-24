@@ -73,7 +73,7 @@ func main() {
 
     http.Handle("/contact.html", middleHandler(func(w http.ResponseWriter, r *http.Request) {
         var t *template.Template
-        if t, err = template.ParseFiles("resources/index.html"); err != nil {
+        if t, err = template.ParseFiles("resources/contact.html"); err != nil {
             log.Println("an error occurred while parsing template")
             log.Println(err)
             http.Error(w, http.StatusText(http.StatusInternalServerError), http.StatusInternalServerError)

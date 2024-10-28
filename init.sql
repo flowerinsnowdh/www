@@ -15,7 +15,7 @@ USE `www`;
 CREATE TABLE `access_log` (
     `id` INT PRIMARY KEY AUTO_INCREMENT,
     `remote_address` VARCHAR(255),
-    `host` VARCHAR(255),
+    `host` VARCHAR(255) NOT NULL,
     `path` VARCHAR(255) NOT NULL,
     `referer` VARCHAR(255),
     `user_agent` VARCHAR(255),

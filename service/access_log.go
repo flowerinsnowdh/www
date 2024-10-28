@@ -5,7 +5,7 @@ import (
     "github.com/flowerinsnowdh/www/dao"
 )
 
-func (service *Service) LogAccess(remoteAddr string, path string, referer string, userAgent string) error {
+func (service *Service) LogAccess(remoteAddr string, host string, path string, referer string, userAgent string) error {
     var d *dao.DAO = (*dao.DAO)(service)
 
     return d.InsertAccessLog(
@@ -13,6 +13,7 @@ func (service *Service) LogAccess(remoteAddr string, path string, referer string
             String: remoteAddr,
             Valid:  remoteAddr != "",
         },
+        host,
         path,
         &sql.NullString{
             String: referer,

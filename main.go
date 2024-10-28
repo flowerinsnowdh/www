@@ -62,7 +62,7 @@ func main() {
     }
 
 	var mux *http.ServeMux = http.NewServeMux()
-    controller.Control(mux, indexPage, s)
+    controller.Control(mux, conf, indexPage, s)
 
     fmt.Println("Listening on "+conf.Bind+"...")
     if err = http.ListenAndServe(conf.Bind, mux); err != nil {

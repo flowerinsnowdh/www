@@ -7,6 +7,8 @@
  */
 package config
 
+var Conf *Config
+
 type Config struct {
 	Bind        string       `toml:"bind"`
 	MySQLConfig *MySQLConfig `toml:"mysql"`

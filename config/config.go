@@ -8,11 +8,9 @@
 package config
 
 type Config struct {
-	Bind         string       `toml:"bind"`
-	StaticDomain string       `toml:"static_domain"`
-	WWWDomain    string       `toml:"www_domain"`
-	BlogURL      string       `toml:"blog_url"`
-	MySQL        *MySQLConfig `toml:"mysql"`
+	Bind        string       `toml:"bind"`
+	MySQLConfig *MySQLConfig `toml:"mysql"`
+	SiteConfig  *SiteConfig  `toml:"site"`
 }
 
 type MySQLConfig struct {
@@ -20,4 +18,13 @@ type MySQLConfig struct {
 	User     string `toml:"user"`
 	Password string `toml:"password"`
 	Schema   string `toml:"schema"`
+}
+
+type SiteConfig struct {
+	Title        string       `toml:"title"`
+	StaticDomain string       `toml:"static_domain"`
+	WWWDomain    string       `toml:"www_domain"`
+	BlogURL      string       `toml:"blog_url"`
+	ICPNumber    string       `toml:"icp_number"`
+	NISMSPNumber string       `toml:"nismsp_number"`
 }

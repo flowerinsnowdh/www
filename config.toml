@@ -1,11 +1,15 @@
 bind = '[::1]:8080'
 
-static_domain = 'static.flowerinsnow.online'
-www_domain = 'www.flowerinsnow.online'
-blog_url = 'https://blog.flowerinsnow.online/'
-
 [mysql]
-host = 'localhost:3306'
+host = '[::1]:3306'
 user = 'www'
-password = 'my-password'
+password = ''
 schema = 'www'
+
+[site]
+static_domain = 'static.flowerinsnow.cn'
+www_domain = 'www.flowerinsnow.cn'
+blog_url = 'https://blog.flowerinsnow.cn/'
+title = '编程学习与笔记日记'
+icp_number = '苏ICP备2023048510号-2'
+nismsp_number = '苏公网安备32050502011681号'

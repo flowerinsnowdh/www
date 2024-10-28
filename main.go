@@ -40,12 +40,15 @@ func main() {
     }
 
     var indexPage *object.IndexPageConfig = &object.IndexPageConfig{
-        StaticDomain: conf.StaticDomain,
-        WWWDomain:    conf.WWWDomain,
-        BlogURL:      conf.BlogURL,
+        Title:        conf.SiteConfig.Title,
+        StaticDomain: conf.SiteConfig.StaticDomain,
+        WWWDomain:    conf.SiteConfig.WWWDomain,
+        BlogURL:      conf.SiteConfig.BlogURL,
+		ICPNumber:    conf.SiteConfig.ICPNumber,
+		NISMSPNumber: conf.SiteConfig.NISMSPNumber,
     }
 
-    if db, err = sql.Open("mysql", conf.MySQL.User+":"+conf.MySQL.Password+"@tcp("+conf.MySQL.Host+")/"+conf.MySQL.Schema); err != nil {
+    if db, err = sql.Open("mysql", conf.MySQLConfig.User+":"+conf.MySQLConfig.Password+"@tcp("+conf.MySQLConfig.Host+")/"+conf.MySQLConfig.Schema); err != nil {
         util.StderrPrintln("failed to open connection to mysql")
         panic(err)
     }
@@ -58,10 +61,11 @@ func main() {
         panic(err)
     }
 
-    controller.Control(indexPage, s)
+	var mux *http.ServeMux = http.NewServeMux()
+    controller.Control(mux, indexPage, s)
 
     fmt.Println("Listening on "+conf.Bind+"...")
-    if err = http.ListenAndServe(conf.Bind, nil); err != nil {
+    if err = http.ListenAndServe(conf.Bind, mux); err != nil {
         util.StderrPrintln("failed to start http server")
         panic(err)
     }

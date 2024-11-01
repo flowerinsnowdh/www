@@ -9,7 +9,7 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>400 Bad Request | {{ .Title }}</title>
+    <title>418 I’m a teapot | {{ .Title }}</title>
     <link rel="stylesheet" type="text/css" href="https://{{ .StaticDomain }}/css/icp.css">
     <link rel="stylesheet" type="text/css" href="https://{{ .StaticDomain }}/css/style.css">
 </head>
@@ -21,14 +21,10 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 </div>
 
 <div class="card center">
-    <h1 class="h1-in-card">400 Bad Request</h1>
-    <p class="p-in-card">您的请求不能被服务器理解</p>
-    {{ if .HasError }}
-    <p class="error-p-in-card">错误信息：</p>
-    {{ end }}
-    {{ range .ErrorMessages }}
-    <p class="error-p-in-card">{{ . }}</p>
-    {{ end }}
+    <h1 class="h1-in-card">418 I’m a teapot</h1>
+    <p class="p-in-card">你想干什么！</p>
+    <p class="p-in-card">好好反思反思你为什么会来到这里！</p>
+    <img alt="whydoyouthinkyoucanaccess" src="https://{{ .StaticDomain }}/whydoyouthinkyoucanaccess.png" style="width: 540px;height: 418px">
 </div>
 <div class="beian-container">
     <div class="beian-inner-container">

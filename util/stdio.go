@@ -1,10 +1,10 @@
 package util
 
 import (
-    "fmt"
-    "os"
+	"fmt"
+	"os"
 )
 
-func StderrPrintln(a... any) {
-    _, _ = fmt.Fprintln(os.Stderr, a)
+func ErrPrintln(a ...any) {
+	_, _ = fmt.Fprintln(os.Stderr, a)
 }

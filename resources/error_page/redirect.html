@@ -9,7 +9,7 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>400 Bad Request | {{ .Title }}</title>
+    <title>跳转 | {{ .Title }}</title>
     <link rel="stylesheet" type="text/css" href="https://{{ .StaticDomain }}/css/icp.css">
     <link rel="stylesheet" type="text/css" href="https://{{ .StaticDomain }}/css/style.css">
 </head>
@@ -21,14 +21,11 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 </div>
 
 <div class="card center">
-    <h1 class="h1-in-card">400 Bad Request</h1>
-    <p class="p-in-card">您的请求不能被服务器理解</p>
-    {{ if .HasError }}
-    <p class="error-p-in-card">错误信息：</p>
-    {{ end }}
-    {{ range .ErrorMessages }}
-    <p class="error-p-in-card">{{ . }}</p>
-    {{ end }}
+    <h1 class="h1-in-card">您即将离开本站</h1>
+    <p class="p-in-card">您即将前往 {{ .TargetURL }}</p>
+    <p class="p-in-card">新的网站不受本站约束，继续访问时可能存在不可控的风险</p>
+    <p class="p-in-card">诈骗无情，防范有道，智慧防范，安全无忧。 </p>
+    <p class="p-in-card">如果继续，本站将不承担您在目标网站的任何责任，如果继续访问，请点击<a href="{{ .TargetURL }}">这里</a></p>
 </div>
 <div class="beian-container">
     <div class="beian-inner-container">

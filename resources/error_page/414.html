@@ -9,7 +9,7 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>500 Internal Server Error | {{ .Title }}</title>
+    <title>414 Request URI Too Long | {{ .Title }}</title>
     <link rel="stylesheet" type="text/css" href="https://{{ .StaticDomain }}/css/icp.css">
     <link rel="stylesheet" type="text/css" href="https://{{ .StaticDomain }}/css/style.css">
 </head>
@@ -22,7 +22,13 @@ file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 <div class="card center">
     <h1 class="h1-in-card">414 Request URI Too Long</h1>
-    <p class="p-in-card">您发送的{{ .Status414 }}过长</p>
+    <p class="p-in-card">您发送的某个参数过长</p>
+    {{ if .HasError }}
+    <p class="error-p-in-card">错误信息：</p>
+    {{ end }}
+    {{ range .ErrorMessages }}
+    <p class="error-p-in-card">{{ . }}</p>
+    {{ end }}
 </div>
 <div class="beian-container">
     <div class="beian-inner-container">

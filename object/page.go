@@ -7,16 +7,18 @@
  */
 package object
 
-type IndexPageConfig struct {
-	Title         string
-	StaticDomain  string
-	WWWDomain     string
-	BlogURL       string
-	ICPNumber     string
-	NISMSPNumber  string
+type IndexPageVars struct {
+	Title        string
+	StaticDomain string
+	WWWDomain    string
+	BlogURL      string
+	ICPNumber    string
+	NISMSPNumber string
 }
 
 type IndexPageVariables struct {
-	IndexPageConfig
-	Status414     string
+	IndexPageVars
+	TargetURL     string
+	HasError      bool
+	ErrorMessages []string
 }

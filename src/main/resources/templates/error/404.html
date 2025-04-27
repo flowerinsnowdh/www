@@ -1,0 +1,38 @@
+<!--
+www
+Copyright (C) 2025  flowerinsnow
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>404 Not Found - 冬花的编程学习</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body class="main">
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="cards">
+    <div class="card">
+        <h3 class="card-title">404 Not Found</h3>
+        <p class="card-p normal-text">您放问了不存在或不希望被浏览的页面</p>
+        <p class="card-p normal-text">请您检查路径后重试</p>
+    </div>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>

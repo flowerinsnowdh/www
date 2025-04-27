@@ -1,0 +1,41 @@
+<!--
+www
+Copyright (C) 2025  flowerinsnow
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU Affero General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU Affero General Public License for more details.
+
+You should have received a copy of the GNU Affero General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>重定向 - 冬花的编程学习</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
+</head>
+<body class="main">
+<div th:replace="~{fragments/header :: header}"></div>
+
+<main class="cards">
+    <div class="card">
+        <h3 class="card-title">您即将离开本站</h3>
+        <p class="card-p normal-text" th:text="'您即将前往 ' + ${dest}"></p>
+        <p class="card-p normal-text">新的网站不受本站约束，继续访问时可能存在未知的风险</p>
+        <p class="card-p normal-text">诈骗无情，防范有道，智慧防范，安全无忧。</p>
+        <p class="card-p normal-text">如果继续，本站将不承担您在目标网站的任何责任</p>
+        <a th:href="${dest}" target="_blank" class="btn">继续</a>
+    </div>
+</main>
+
+<div th:replace="~{fragments/footer :: footer}"></div>
+</body>
+</html>
